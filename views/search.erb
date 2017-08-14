@@ -1,0 +1,22 @@
+<h2>Search for waypoints: <%= params[:waypoints] %></h2>
+<form action="/search">
+  <div class="input-field">
+    <textarea class="form-control" name="waypoints" cols="30" rows="10"><%= params[:waypoints] %></textarea>
+  </div>
+  <div class="input-field">
+    <input class="btn btn-primary" type="submit">
+  </div>
+</form>
+<% @waypoints.each do |k, v| %>
+  <h5><%= k %></h5>
+  <table class="table">
+    <% v.each do |r| %>
+      <% next if r.size == 1 %>
+      <tr>
+        <% r.each do |td| %>
+          <td><%= td %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
