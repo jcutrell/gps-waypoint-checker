@@ -1,6 +1,6 @@
 <h2>Search for waypoints</h2>
-<p>Note: These waypoints must be fixes only; nav aids not currently supported.</p>
-<form action="/search">
+<p>Note: These waypoints must be fixes only; nav aids not currently supported. Comma separated, whitespace will be stripped.</p>
+<form action="/search" method="post">
   <div class="input-field">
     <textarea class="form-control" name="waypoints" cols="30" rows="10"><%= params[:waypoints] %></textarea>
   </div>

@@ -6,7 +6,7 @@ class LookupFixApp < Sinatra::Base
 
   helpers do
     def build_url(waypoint)
-      "https://nfdc.faa.gov/nfdcApps/services/airspaceFixes/fix_search.jsp?keyword=#{waypoint}"
+      "https://nfdc.faa.gov/nfdcApps/services/ajv5/fix_search.jsp?keyword=#{waypoint}"
     end
   end
 

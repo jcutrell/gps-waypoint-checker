@@ -1,5 +1,5 @@
 <h2>Search for waypoints: <%= params[:waypoints] %></h2>
-<form action="/search">
+<form action="/search" method="post">
   <div class="input-field">
     <textarea class="form-control" name="waypoints" cols="30" rows="10"><%= params[:waypoints] %></textarea>
   </div>
